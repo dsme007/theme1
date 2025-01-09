@@ -1,5 +1,5 @@
-<section class="container">
-  <h2>{{ section.settings.title }}</h2>
+<section class="container my-3">
+  <h2 class="text-center">{{ section.settings.title }}</h2>
   <div class="row py-4">
     {% for product in collections[section.settings.featured_collection].products %} 
       <div class="col">
@@ -12,9 +12,7 @@
           {% endif %}
           
           <div class="card-body">
-            <h5 class="card-title">{{ product.title }}</h5>
-            <p class="card-text">{{ product.description }}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h3 class="card-title"><a href="{{ product.url }}">{{ product.title }}</a></h3>
           </div>
         </div>
       </div>
